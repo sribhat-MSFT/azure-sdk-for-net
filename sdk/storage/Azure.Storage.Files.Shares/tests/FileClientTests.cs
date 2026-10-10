@@ -4017,7 +4017,7 @@ namespace Azure.Storage.Files.Shares.Tests
         }
 
         [RecordedTest]
-        [ServiceVersion(Min = ShareClientOptions.ServiceVersion.V2026_10_06)]
+        [ServiceVersion(Min = ShareClientOptions.ServiceVersion.V2026_12_06)]
         public async Task GetAllRangeListAsync()
         {
             // Arrange
@@ -4051,7 +4051,7 @@ namespace Azure.Storage.Files.Shares.Tests
         }
 
         [RecordedTest]
-        [ServiceVersion(Min = ShareClientOptions.ServiceVersion.V2026_10_06)]
+        [ServiceVersion(Min = ShareClientOptions.ServiceVersion.V2026_12_06)]
         public async Task GetAllRangeListAsync_AccessConditions()
         {
             // Arrange
@@ -4077,7 +4077,7 @@ namespace Azure.Storage.Files.Shares.Tests
         }
 
         [RecordedTest]
-        [ServiceVersion(Min = ShareClientOptions.ServiceVersion.V2026_10_06)]
+        [ServiceVersion(Min = ShareClientOptions.ServiceVersion.V2026_12_06)]
         public async Task GetAllRangeListAsync_AccessConditionsFail()
         {
             // Arrange
@@ -4107,7 +4107,7 @@ namespace Azure.Storage.Files.Shares.Tests
         }
 
         [RecordedTest]
-        [ServiceVersion(Min = ShareClientOptions.ServiceVersion.V2026_10_06)]
+        [ServiceVersion(Min = ShareClientOptions.ServiceVersion.V2026_12_06)]
         public async Task GetAllRangeListAsync_ByPage()
         {
             // Arrange
@@ -4145,7 +4145,7 @@ namespace Azure.Storage.Files.Shares.Tests
         }
 
         [RecordedTest]
-        [ServiceVersion(Min = ShareClientOptions.ServiceVersion.V2026_10_06)]
+        [ServiceVersion(Min = ShareClientOptions.ServiceVersion.V2026_12_06)]
         public async Task GetAllRangeListDiffAsync()
         {
             // Arrange
@@ -4195,7 +4195,7 @@ namespace Azure.Storage.Files.Shares.Tests
         }
 
         [RecordedTest]
-        [ServiceVersion(Min = ShareClientOptions.ServiceVersion.V2026_10_06)]
+        [ServiceVersion(Min = ShareClientOptions.ServiceVersion.V2026_12_06)]
         public async Task GetAllRangeListDiffAsync_AccessConditions()
         {
             // Arrange
@@ -4221,7 +4221,7 @@ namespace Azure.Storage.Files.Shares.Tests
         }
 
         [RecordedTest]
-        [ServiceVersion(Min = ShareClientOptions.ServiceVersion.V2026_10_06)]
+        [ServiceVersion(Min = ShareClientOptions.ServiceVersion.V2026_12_06)]
         public async Task GetAllRangeListDiffAsync_AccessConditionsFail()
         {
             // Arrange
@@ -4251,7 +4251,7 @@ namespace Azure.Storage.Files.Shares.Tests
         }
 
         [RecordedTest]
-        [ServiceVersion(Min = ShareClientOptions.ServiceVersion.V2026_10_06)]
+        [ServiceVersion(Min = ShareClientOptions.ServiceVersion.V2026_12_06)]
         public async Task GetAllRangeListDiffAsync_ByPage()
         {
             // Arrange

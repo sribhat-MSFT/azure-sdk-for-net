@@ -593,7 +593,7 @@ namespace Azure.Storage.Blobs.Test
         }
 
         [RecordedTest]
-        [ServiceVersion(Min = BlobClientOptions.ServiceVersion.V2026_10_06)]
+        [ServiceVersion(Min = BlobClientOptions.ServiceVersion.V2026_12_06)]
         public async Task StageBlockAsync_MD5()
         {
             await using DisposingContainer test = await GetTestContainerAsync();
@@ -886,7 +886,7 @@ namespace Azure.Storage.Blobs.Test
         }
 
         [RecordedTest]
-        [ServiceVersion(Min = BlobClientOptions.ServiceVersion.V2026_10_06)]
+        [ServiceVersion(Min = BlobClientOptions.ServiceVersion.V2026_12_06)]
         public async Task StageBlockFromUriAsync_MD5()
         {
             await using DisposingContainer test = await GetTestContainerAsync();
@@ -3607,7 +3607,7 @@ namespace Azure.Storage.Blobs.Test
         }
 
         [RecordedTest]
-        [ServiceVersion(Min = BlobClientOptions.ServiceVersion.V2026_10_06)]
+        [ServiceVersion(Min = BlobClientOptions.ServiceVersion.V2026_12_06)]
         public async Task SyncUploadFromUriAsync_ContentMd5()
         {
             // Arrange

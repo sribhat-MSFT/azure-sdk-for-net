@@ -896,7 +896,7 @@ namespace Azure.Storage.Blobs.Test
         }
 
         [RecordedTest]
-        [ServiceVersion(Min = BlobClientOptions.ServiceVersion.V2026_10_06)]
+        [ServiceVersion(Min = BlobClientOptions.ServiceVersion.V2026_12_06)]
         public async Task AppendBlockAsync_MD5()
         {
             await using DisposingContainer test = await GetTestContainerAsync();
@@ -1566,7 +1566,7 @@ namespace Azure.Storage.Blobs.Test
         }
 
         [RecordedTest]
-        [ServiceVersion(Min = BlobClientOptions.ServiceVersion.V2026_10_06)]
+        [ServiceVersion(Min = BlobClientOptions.ServiceVersion.V2026_12_06)]
         public async Task AppendBlockFromUriAsync_MD5()
         {
             await using DisposingContainer test = await GetTestContainerAsync();
