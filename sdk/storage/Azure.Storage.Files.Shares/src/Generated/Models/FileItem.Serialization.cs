@@ -128,6 +128,18 @@ namespace Azure.Storage.Files.Shares.Models
                 writer.WriteValue(PermissionKey);
                 writer.WriteEndElement();
             }
+            if (Optional.IsDefined(LinkCount))
+            {
+                writer.WriteStartElement("LinkCount");
+                writer.WriteValue(LinkCount.Value);
+                writer.WriteEndElement();
+            }
+            if (Optional.IsDefined(FileType))
+            {
+                writer.WriteStartElement("FileType");
+                writer.WriteValue(FileType.Value.ToString());
+                writer.WriteEndElement();
+            }
         }
 
         /// <param name="element"> The xml element to deserialize. </param>
@@ -144,6 +156,8 @@ namespace Azure.Storage.Files.Shares.Models
             FileProperty properties = default;
             string attributes = default;
             string permissionKey = default;
+            long? linkCount = default;
+            NfsFileType? fileType = default;
 
             foreach (var child in element.Elements())
             {
@@ -173,8 +187,25 @@ namespace Azure.Storage.Files.Shares.Models
                     permissionKey = (string)child;
                     continue;
                 }
+                if (localName == "LinkCount")
+                {
+                    linkCount = (long?)child;
+                    continue;
+                }
+                if (localName == "FileType")
+                {
+                    fileType = new NfsFileType((string)child);
+                    continue;
+                }
             }
-            return new FileItem(name, fileId, properties, attributes, permissionKey);
+            return new FileItem(
+                name,
+                fileId,
+                properties,
+                attributes,
+                permissionKey,
+                linkCount,
+                fileType);
         }
 
         /// <param name="writer"> The XML writer. </param>
